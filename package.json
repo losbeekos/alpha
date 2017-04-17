@@ -2,18 +2,18 @@
   "name": "alpha",
   "version": "0.0.1",
   "description": "Alpha",
-  "main": "index.js",
+  "main": "src/app.js",
   "scripts": {
-    "start": "webpack-dev-server",
-    "build-dev": "PLATFORM=web webpack",
-    "build-prod": "NODE_ENV=production PLATFORM=web webpack"
+    "build:dev-server": "webpack-dev-server --progress",
+    "build:dev": "webpack --progress",
+    "build:prod": "NODE_ENV=production webpack --progress"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/losbeekos/alpha.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Jeroen van Beek",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/losbeekos/alpha/issues"

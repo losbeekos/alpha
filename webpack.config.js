@@ -1,22 +1,23 @@
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 const isProduction = process.env.NODE_ENV === 'production';
 
-module.exports = {
+const config = {
   devtool: 'source-map',
   entry: './src/app.js',
   output: {
     filename: 'app.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/dist/'
+    publicPath: '/dist/',
   },
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: /(node_modules)/,
-        use: ['babel-loader', 'eslint-loader']
+        use: ['babel-loader', 'eslint-loader'],
       },
       {
         test: /\.scss$/,
@@ -28,29 +29,39 @@ module.exports = {
               options: {
                 importLoaders: 2,
                 sourceMap: true,
-                minimize: isProduction
-              }
+                minimize: isProduction,
+              },
             },
             {
               loader: 'sass-loader',
               options: {
                 sourceMap: true,
-              }
+              },
             },
             {
               loader: 'postcss-loader',
               options: {
                 sourceMap: true,
-              }
-            }
-          ]
-        })
-      }
-    ]
+              },
+            },
+          ],
+        }),
+      },
+    ],
   },
   plugins: [
     new ExtractTextPlugin({
-      filename: 'app.css'
+      filename: 'app.css',
     }),
-  ]
+  ],
+};
+
+if (isProduction) {
+  config.plugins.push(
+    new webpack.optimize.UglifyJsPlugin({
+      sourceMap: true,
+    }),
+  );
 }
+
+module.exports = config;
