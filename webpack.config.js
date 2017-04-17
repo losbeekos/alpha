@@ -1,8 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-
-console.log(process.env.NODE_ENV);
+const isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = {
   devtool: 'source-map',
@@ -25,13 +24,24 @@ module.exports = {
           fallback: 'style-loader',
           use: [
             {
-              loader: 'css-loader?sourceMap'
+              loader: 'css-loader',
+              options: {
+                importLoaders: 2,
+                sourceMap: true,
+                minimize: isProduction
+              }
             },
             {
-              loader: 'sass-loader?sourceMap'
+              loader: 'sass-loader',
+              options: {
+                sourceMap: true,
+              }
             },
             {
-              loader: 'postcss-loader'
+              loader: 'postcss-loader',
+              options: {
+                sourceMap: true,
+              }
             }
           ]
         })

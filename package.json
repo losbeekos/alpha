@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "NODE_ENV=production PLATFORM=web webpack"
+    "build-dev": "PLATFORM=web webpack",
+    "build-prod": "NODE_ENV=production PLATFORM=web webpack"
   },
   "repository": {
     "type": "git",
