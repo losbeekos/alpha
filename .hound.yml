@@ -7,3 +7,6 @@ eslint:
   ignore_file: .eslintignore
 css:
   enabled: false
+stylelint:
+  enabled: true
+  config_file: .stylelintrc
