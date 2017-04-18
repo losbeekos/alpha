@@ -9,4 +9,5 @@ css:
   enabled: false
 stylelint:
   enabled: true
-  config_file: stylelint.config.js
+  config_file: .stylelintrc
+  ignore_file: .stylelintignore
