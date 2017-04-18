@@ -36,4 +36,4 @@ module.exports = {
     'number-no-trailing-zeros': true,
     'length-zero-no-unit': true,
   }
-}
+};
