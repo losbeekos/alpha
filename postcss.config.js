@@ -1,6 +1,9 @@
+const stylelint = require('stylelint');
+const autoprefixer = require('autoprefixer');
+
 module.exports = {
   plugins: [
-    require('stylelint'),
-    require('autoprefixer')
-  ]
-}
+    stylelint,
+    autoprefixer,
+  ],
+};

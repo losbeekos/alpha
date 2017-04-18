@@ -57,11 +57,11 @@ const config = {
 };
 
 if (isProduction) {
-  config.plugins.push(
-    new webpack.optimize.UglifyJsPlugin({
-      sourceMap: true,
-    }),
-  );
+  const uglifyJsPlugin = new webpack.optimize.UglifyJsPlugin({
+    sourceMap: true,
+  });
+
+  config.plugins.push(uglifyJsPlugin);
 }
 
 module.exports = config;

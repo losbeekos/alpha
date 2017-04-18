@@ -1,9 +1,8 @@
 // https://stylelint.io/user-guide/rules/
 
 module.exports = {
-  'extends': 'stylelint-config-standard',
-  'rules': {
-
+  extends: 'stylelint-config-standard',
+  rules: {
     // Quotes
     'font-family-name-quotes': 'always-where-recommended',
     'function-url-quotes': 'always',
@@ -35,6 +34,6 @@ module.exports = {
     // Zeros
     'number-leading-zero': 'never',
     'number-no-trailing-zeros': true,
-    'length-zero-no-unit': true
-  }
-}
+    'length-zero-no-unit': true,
+  },
+};
