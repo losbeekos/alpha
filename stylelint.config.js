@@ -34,6 +34,6 @@ module.exports = {
     // Zeros
     'number-leading-zero': 'never',
     'number-no-trailing-zeros': true,
-    'length-zero-no-unit': true
+    'length-zero-no-unit': true,
   },
 };
