@@ -16,7 +16,6 @@ rules:
   # Speciificty
   max-nesting-depth: 4
   selector-max-compound-selectors: 3
-  selector-max-specificity: 0,3,3
 
   # Acceptable selectors
   color-named: always-where-possible
