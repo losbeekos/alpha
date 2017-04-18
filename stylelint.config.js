@@ -35,5 +35,5 @@ module.exports = {
     'number-leading-zero': 'never',
     'number-no-trailing-zeros': true,
     'length-zero-no-unit': true,
-  }
+  },
 };
