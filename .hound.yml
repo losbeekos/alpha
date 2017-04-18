@@ -7,6 +7,10 @@ eslint:
   ignore_file: .eslintignore
 css:
   enabled: false
-stylelint:
-  enabled: true
-  config_file: .stylelintrc
+# Stylelint support is coming:
+# https://github.com/platanus/hound/pull/8
+#
+# stylelint:
+#   enabled: true
+#   config_file: .stylelintrc
+#   ignore_file: .stylelintignore
